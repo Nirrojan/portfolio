@@ -181,10 +181,10 @@ function closePopup(popupId) {
 // Function to open certificates page based on the selected category
 function openCertificates(category) {
   if (category === 'cisco') {
-      window.location.href = '/cisco_certificates.html'; // Navigate to the Cisco certificates page
+      window.location.href = '\cisco_certificates.html'; // Navigate to the Cisco certificates page
   } else if (category === 'Azure') {
-      window.location.href = '/Azure_certificates.html'; // Navigate to the Linux certificates page
+      window.location.href = '\Azure_certificates.html'; // Navigate to the Linux certificates page
   } else if (category === 'Other') {
-      window.location.href = '/Other_certificates.html'; // Navigate to the Network certificates page
+      window.location.href = '\Other_certificates.html'; // Navigate to the Network certificates page
   }
 }

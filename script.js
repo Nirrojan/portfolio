@@ -123,8 +123,8 @@ $('.technical-container').owlCarousel({
                 sendButton.classList.remove("invalid");
                 // Sending the email
                 emailjs.send("service_6l5nc8k","template_qpw6f5e", {
-                      to_email: "skspavithiran@gmail.com", //  my desired email address
-                      to_name: "PAVITHIRAN",
+                      to_email: "nirrojann@gmail.com", //  my desired email address
+                      to_name: "Nirrojan",
                       from_name: name,
                       message: message,
                       reply_to: email

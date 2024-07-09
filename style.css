@@ -954,26 +954,49 @@ form textarea {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
   }
   .logos {
-    overflow: hidden; /* Ensure the image doesn't overflow */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0); /* Initially no shadow */
-    transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
-    position: relative; /* Ensure the overlay is positioned relative to the logo */
-    border-radius: 100%; /* Round edges */
+    position: relative; /* Ensure relative positioning */
     width: 200px; /* Adjust the width of the container */
-    height: 200px; /* Adjust the height of the container */
+    height: auto; /* Adjust height to auto to accommodate text */
     display: inline-block; /* Display logos in one row */
-  margin-right: 20px;
-  }
-  
-  .logos:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* Shadow effect on hover */
+    margin-right: 20px;
+    overflow: hidden; /* Hide overflow content */
+    text-align: center; /* Center-align the text */
   }
   
   .logos img {
     width: 100%; /* Ensure the image takes up the entire space */
+    display: block; /* Adjust for potential image display issues */
+    border-radius: 100%; /* Round edges */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    z-index: 1; /* Ensure the image is above the text */
+    position: relative; /* Required to apply z-index */
   }
-
-.logos:hover .overlay-text {
+  
+  .logo-text {
+    margin-top: 10px; /* Space between the image and the text */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #333; /* Text color */
+  }
+  
+  .overlay-text {
+    position: absolute; /* Position the text absolutely */
+    bottom: 0; /* Align text to the bottom */
+    left: 0; /* Align text to the left */
+    right: 0; /* Align text to the right */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px; /* Padding around the text */
+    text-align: center; /* Center-align the text */
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Smooth transition for background color and opacity */
+    opacity: 0; /* Initially hide the overlay text */
+    z-index: 0; /* Ensure the text is beneath the image */
+  }
+  
+  .logos:hover img {
+    transform: scale(1.1); /* Scale the image on hover */
+  }
+  
+  .logos:hover .overlay-text {
     opacity: 1; /* Show overlay text on hover */
     background-color: rgba(0, 0, 0, 0.9); /* Darker background on hover */
   }
@@ -1014,7 +1037,3 @@ form textarea {
 .hidden {
     display: none;
 }
-
-
-.
-  

@@ -202,18 +202,3 @@ document.addEventListener('DOMContentLoaded', function() {
       buttonList.classList.toggle('hidden');
   });
 });
-
-
-    VANTA.HALO({
-        el: "#vanta-bg",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        baseColor: 0x1a1a1a,
-        backgroundColor: 0x222222,
-        amplitudeFactor: 1.20,
-        size: 3.00
-    });
-

@@ -47,7 +47,6 @@ toggleBtns.forEach((btn) => {
   });
 });
 
-
 // Auto Typing Effect
 const typed = document.querySelector('.typed');
 
@@ -70,8 +69,7 @@ $('.technical-container').owlCarousel({
   autoplayTime:6000,
   margin:10,
   nav:true,
-  navText:["<i class='fa-solid fa-arrow-left'></i>",
-           "<i class='fa-solid fa-arrow-right'></i>"],
+  navText:["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
   responsive:{
       0:{
           items:1,
@@ -92,77 +90,72 @@ $('.technical-container').owlCarousel({
       1340:{
         items:5,
         nav:true
-    },
+      },
       1600:{
         items:6,
         nav:true
-    }
+      }
   }
 });
 
-  // sending email with validation
+// sending email with validation
 
-    emailjs.init("QJV_vAGN9GdHf1Bm2");
+emailjs.init("QJV_vAGN9GdHf1Bm2");
 
-    document.addEventListener("DOMContentLoaded", function() {
-            var emailInput = document.getElementById("emailInput");
-            var emailError = document.getElementById("emailError");
-            var sendButton = document.getElementById("sendButton");
-            var nameInput = document.getElementById("nameInput");
-            var messageInput = document.getElementById("messageInput");
-            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+document.addEventListener("DOMContentLoaded", function() {
+    var emailInput = document.getElementById("emailInput");
+    var emailError = document.getElementById("emailError");
+    var sendButton = document.getElementById("sendButton");
+    var nameInput = document.getElementById("nameInput");
+    var messageInput = document.getElementById("messageInput");
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
+    sendButton.addEventListener("click", function() {
+        const name = nameInput.value;
+        const email = emailInput.value;
+        const message = messageInput.value;
+        if (nameInput.value.trim() !== "" && messageInput.value.trim() !== "" && emailInput.value.match(mailformat)) { 
+            // Remove invalid class from the button
+            sendButton.classList.remove("invalid");
+            // Sending the email
+            emailjs.send("service_6l5nc8k","template_qpw6f5e", {
+                to_email: "nirrojann@gmail.com", //  my desired email address
+                to_name: "Nirrojan",
+                from_name: name,
+                message: message,
+                reply_to: email
+            }).then(function(response) {
+                console.log("Email sent successfully:", response);
+                alert("Email sent successfully!");
+            }, function(error) {
+                console.error("Email could not be sent:", error);
+                alert("Email could not be sent.");
+            });
 
-        sendButton.addEventListener("click", function() {
-            const name = nameInput.value;
-            const email = emailInput.value;
-            const message = messageInput.value;
-            if(nameInput.value.trim() !== "" && messageInput.value.trim() !== "" && emailInput.value.match(mailformat))
-              { 
-                // Remove invalid class from the button
-                sendButton.classList.remove("invalid");
-                // Sending the email
-                emailjs.send("service_6l5nc8k","template_qpw6f5e", {
-                      to_email: "nirrojann@gmail.com", //  my desired email address
-                      to_name: "Nirrojan",
-                      from_name: name,
-                      message: message,
-                      reply_to: email
-                  }).then(function(response) {
-                      console.log("Email sent successfully:", response);
-                      alert("Email sent successfully!");
-                  }, function(error) {
-                      console.error("Email could not be sent:", error);
-                      alert("Email could not be sent.");
-                  });
-
-                // Clear input fields after successful submission
-                  nameInput.value = "";
-                  emailInput.value = "";
-                  messageInput.value = "";
-                  emailError.textContent = "";
-              }
-            else
-            {
-              var err1 = "";
-              var err2 = "";
-              if (nameInput.value.trim() === "") {
-                  err1 = "Name is empty";
-              }
-              if (messageInput.value.trim() === "") {
-                  err1 += (err1 ? ", " : "") + "Message is empty";
-              }
-              if (!emailInput.value.match(mailformat)) {
-                  err2 = "Invalid email address";
-              }
-              emailError.textContent = err1 + (err1 && err2 ? " and " : "") + err2;
-              sendButton.classList.add("invalid");
-              emailInput.focus();
+            // Clear input fields after successful submission
+            nameInput.value = "";
+            emailInput.value = "";
+            messageInput.value = "";
+            emailError.textContent = "";
+        } else {
+            var err1 = "";
+            var err2 = "";
+            if (nameInput.value.trim() === "") {
+                err1 = "Name is empty";
             }
-        });
-  });
+            if (messageInput.value.trim() === "") {
+                err1 += (err1 ? ", " : "") + "Message is empty";
+            }
+            if (!emailInput.value.match(mailformat)) {
+                err2 = "Invalid email address";
+            }
+            emailError.textContent = err1 + (err1 && err2 ? " and " : "") + err2;
+            sendButton.classList.add("invalid");
+            emailInput.focus();
+        }
+    });
+});
 
-      
 // Function to open the popup
 function openPopup(popupId) {
   var popup = document.getElementById(popupId);
@@ -178,13 +171,49 @@ function closePopup(popupId) {
       popup.style.display = "none";
   }
 }
+
 // Function to open certificates page based on the selected category
 function openCertificates(category) {
   if (category === 'cisco') {
-      window.location.href = '\cisco_certificates.html'; // Navigate to the Cisco certificates page
+      window.location.href = '/cisco_certificates.html'; // Navigate to the Cisco certificates page
   } else if (category === 'Azure') {
-      window.location.href = '\Azure_certificates.html'; // Navigate to the Linux certificates page
+      window.location.href = '/Azure.html'; // Navigate to the Linux certificates page
   } else if (category === 'Other') {
-      window.location.href = '\Other_certificates.html'; // Navigate to the Network certificates page
+      window.location.href = '/Other_certificates.html'; // Navigate to the Network certificates page
+  } else if (category === 'sk') {
+    window.location.href = '/skholding.html'; // Navigate to the sk projects page
+  } else if (category === 'led') {
+    window.location.href = '/led.html'; // Navigate to the sk projects page
+  } else if (category === 'Rotoract') {
+    window.location.href = '/Rotoract.html'; // Navigate to the sk projects page
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Toggle the display of the Networking button list
+  document.getElementById('mainButton1').addEventListener('click', function() {
+      const buttonList = document.getElementById('buttonList1');
+      buttonList.classList.toggle('hidden');
+  });
+
+  // Toggle the display of the Windows Server button list
+  document.getElementById('mainButton2').addEventListener('click', function() {
+      const buttonList = document.getElementById('buttonList2');
+      buttonList.classList.toggle('hidden');
+  });
+});
+
+
+    VANTA.HALO({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        baseColor: 0x1a1a1a,
+        backgroundColor: 0x222222,
+        amplitudeFactor: 1.20,
+        size: 3.00
+    });
+

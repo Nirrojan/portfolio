@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK holding projects</title> <!-- Link to your CSS file -->
+<link rel="stylesheet" href="style.css">
+
+<!--  *****   Links To Font Awsome Icons   *****  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+<!--   ***** Links To OwlCarousel CSS *****   -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+</head>
+<body>
+    <section class="project" id="projects">
+        <div class="heading">
+            <h2>Projects<span style="color: crimson;"></span></h2>
+        </div>
+        <div class="logos" onclick="openPopup('popup1')">
+          <img src="images\server.jpg" alt="Server Implementation">
+          <div class="logo-text">server implementation plan</div>
+        </div>
+        
+        <div id="popup1" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('popup1')">&times;</span>
+            <div class="popup-details">
+                <div class="popup-image">
+                    <img src="projects\Drawing1_page-0001.jpg" alt="Server implementation plan">
+                </div>
+                <div class="popup-info">
+                    <h2>Server Implementation</h2>
+                    <p> This is Server implementation project.Main server room and branch in this project.
+                        2 Routers in Server room that give internet access for Server room and that connects into load balancer.
+                       load balancer provide internet to firewall and firewall provide internet to Proxy server.
+                       proxy server distribute internet to other servers via switch.<br>
+                        load balancer  purpose is Distribute internet traffic from 2 routers across servers.
+                       it's prevent to overwhelmed Network traffic.<br>
+there is a patchpanel in server rack, that connect switch to all servers and ethernet cable connects in patchpanel that connects branch room 
+in branch, connects  main server room via Ethernet cable,and cable connects to patch panel,patch pannel connects to switch.child servers connects to switch
+the main purpose of this project is connect 2 places in different locations via ethernet cable.
+patchpanel purpose is connects all cables.
+proxy server provide internet to main server and child server and client.
+
+                                     
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="logos" onclick="openPopup('popup2')">
+            <img src="images\vpn.jpg" alt="VPN">
+            <div class="logo-text">VPN Implementation Plan</div>
+          </div>
+          
+          <div id="popup2" class="popup">
+          <div class="popup-content">
+              <span class="close" onclick="closePopup('popup2')">&times;</span>
+              <div class="popup-details">
+                  <div class="popup-image">
+                      <img src="projects\Drawing2_page-0001.jpg" alt="VPN plan">
+                  </div>
+                  <div class="popup-info">
+                      <h2>VPN</h2>
+                      <p> This a VPN Project.Main server room and branch in this project.
+                        2 Routers in Server room that give internet access for Server room and that connects into load balancer.
+                       load balancer provide internet to firewall and firewall provide internet to Proxy server.
+                       proxy server distribute internet to other servers via switch.<br>
+                       
+                       load balancer  purpose is Distribute internet traffic from 2 routers across servers.
+                       it's prevent to overwhelmed Network traffic.<br>
+                       
+                       in branch connects  main server room via internet, a router in branch provide internet.
+                       router connects to firewall.firewall connects to switch.Acces point connects to switch
+                       child server connects in switch. clients connects via access point<br>
+                       
+                       This project main purpose is  connect 2 places in different locations via remotly.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          </div>
+
+         
+        <div class="logos" onclick="openPopup('popup3')">
+            <img src="images\3cx.jpg" alt="3cx">
+            <div class="logo-text">3CX Implementation Plan</div>
+          </div>
+          
+          <div id="popup3" class="popup">
+          <div class="popup-content">
+              <span class="close" onclick="closePopup('popup3')">&times;</span>
+              <div class="popup-details">
+                  <div class="popup-image">
+                      <img src="projects\Drawing3_page-0001.jpg" alt="3cx">
+                  </div>
+                  <div class="popup-info">
+                      <h2>3cx implementation</h2>
+                      <p>This is a 3CX project.3cx softwarebrunning in main server and ip phones,mobile phones
+                        are registered in 3cx software. mobile phone should have 3cx app.
+
+                        this project purpose 3cx users(ip phone,monbile client )can communicate via 3cx.
+                        server room,branch connects tnrough vpn.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          </div>
+        </div>
+        </section>
+        <script src="script.js"></script>
+</body>
+</html>

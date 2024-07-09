@@ -972,4 +972,49 @@ form textarea {
   .logos img {
     width: 100%; /* Ensure the image takes up the entire space */
   }
+
+.logos:hover .overlay-text {
+    opacity: 1; /* Show overlay text on hover */
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+  }
+  
+  
+
+
+
+
+
+
+  #mainButton1, #mainButton2{
+    background-color: rgb(81, 145, 187);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+ .subButton{
+  background-color: rgb(10, 156, 71);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 5px;
+}
+
+#mainButton1:hover, #mainButton2:hover, .subButton:hover {
+    background-color: rgb(61, 48, 236);
+}
+
+.hidden {
+    display: none;
+}
+
+
+.
   

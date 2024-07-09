@@ -24,7 +24,7 @@
 <body>
 <!-- Navbar  Section Start -->
 <header>
-    <a href="#" class="logo">Nirrojan</span>.</a>
+    
 
     <div class="bx bx-menu" id="menu-icon"></div>
 
@@ -33,6 +33,8 @@
         <li><a href="#about">About</a></li>
         <li><a href="#volounteering">Volounteering</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#Certification">Certifications</a></li>
         <li><a href="#contact">Contact</a></li> 
         <div class="bx bx-moon" id="darkmode"></div>
@@ -57,7 +59,7 @@
         <span>Hello!</span>
         <h1>Nirrojan Sureshkumar</h1>
         <h2><span>I'm </span>
-            <span class="typed" data-typed-items="Network Engineer, Network Troubleshooter, Cloud Architect" style="color: crimson;"></span>
+            <span class="typed" data-typed-items="System  Engineer, Network Troubleshooter, Network Administrator" style="color: crimson;"></span>
         </h2>
         <p>As a <B>Network Engineering undergraduate</B> from the University of Kelaniya, I am deeply passionate about the fields of Networking, Cloud computing, Linux, and windows Server.</p>
         <a href="asset/CV.pdf" class="btn" target="_blank">Download CV</a>
@@ -91,7 +93,7 @@
                     <span><a href="mailto:nirrojann@gmail.com" target="_blank">nirrojann@gmail.com</a></span>
                 </div>
             </div>
-                <a href="asset/CV.pdf" class="btn" target="_blank">Download Cv</a>
+                
         </div>
             <div class="content">
                 <div class="toggle-container">
@@ -111,7 +113,7 @@
                     2023 February - 2023 September
                     <h4>CCNP</h4>
                     <p>ATN Campus
-                    <br>2023 October
+                    <br>2023 October- 2024 april
 
                     
 
@@ -130,6 +132,15 @@
                         <p>LED Club University of Kelaniya</p><br>  
                         <h4>Faculty Coordinater(2022 March - 2023 March)</h4>
                         <p>Tamil Students Assocoation University of Kelaniya</p><br> 
+                </div><br>
+                <button class="toggle-btn">Work Experience</button>
+                <div class="toggle-content">
+                  <h4>SK INTERNATIONAL HOLDINGS</h4>
+                  <p>Network Administrator<br>
+                    2024 April - Present<br>
+                  
+                  
+
                 </div>
             </div>
         </div>    
@@ -145,67 +156,21 @@
     <h2>Volounteerig <span style="color: crimson;">Experiences</span></h2>
     <main class="resume-contents">
 
-      <div class="logo" onclick="openPopup('!popup1')">
-        <img src="asset/green.jpeg" alt="greenclub">
-      </div>
-
-      <div id="popup1" class="popup">
-        <div class="popup-content">
-          <span class="close" onclick="closePopup(!'popup1')">&times;</span>
-          <div class="popup-details">
-            <div class="popup-image">
-              <img src="/" alt=""">
+            <div class="logo" onclick="openCertificates('led')">
+              <img src="asset/led.jpeg" alt="led">
             </div>
-            <div class="popup-info">
-              <h2></h2>
-              <p>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-
-      <div class="logo" onclick="openPopup('!popup2')">
+      <div class="logo" onclick="openCertificates('Rotoract')">
         <img src="asset/rotoract.jpeg" alt="rotract">
       </div>
 
-      <div id="popup2" class="popup">
-        <div class="popup-content">
-          <span class="close" onclick="closePopup('!popup2')">&times;</span>
-          <div class="popup-details">
-            <div class="popup-image">
-              <img src="" alt="">
-            </div>
-            <div class="popup-info">
-              <h2></h2>
-              <p>
-              </p>
-            </div>
-          </div>
-        </div>
+     
+
+      <div class="logo" onclick="opencertificates('green')">
+        <img src="asset/green.jpeg" alt="greenclub">
       </div>
 
-      <div class="logo" onclick="openPopup('!popup3')">
-        <img src="asset/led.jpeg" alt="led">
-      </div>
-
-      <div id="popup3" class="popup">
-        <div class="popup-content">
-          <span class="close" onclick="closePopup('!popup3')">&times;</span>
-          <div class="popup-details">
-            <div class="popup-image">
-              <img src="" alt="">
-            </div>
-            <div class="popup-info">
-              <h2></h2>
-              <p>This is where you can provide more details about the logo.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magnam, assumenda ad quis ipsum consectetur aspernatur quibusdam illo rerum vitae, nam excepturi, reprehenderit ea dignissimos.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </main>
   </div>
 </section>
@@ -215,17 +180,140 @@
    
 <!-- Volounteering Section end -->
 
+ <!-- Technical skills section Start --> 
+ <section class="resume reusable" id="skills">
+  <div class="heading">
+    <h2>Technical <span style="color: crimson;">Skills</span></h2>
+    <button id="mainButton1">Networking</button>
+<div id="buttonList1" class="hidden">
+    <button class="subButton" data-description="Description for Networking Button 1" onclick="openPopup('popup1')">Routing & Switching </button>
+    <button class="subButton" data-description="Description for Networking Button 2" onclick="openPopup('popup2')">Routing Protocols</button>
+    <button class="subButton" data-description="Description for Networking Button 3" onclick="openPopup('popup3')">Security protocols</button>
+   
 
-<!-- skills section starts  -->
+</div>
+<br>
+<button id="mainButton2">Windows Server</button>
+<div id="buttonList2" class="hidden">
+    <button class="subButton" data-description="Description for Networking Button 1" onclick="openPopup('popup4')">VPN</button>
+    <button class="subButton" data-description="Description for Networking Button 2" onclick="openPopup('popup5')">3cx</button>
+    <button class="subButton" data-description="Description for Networking Button 3" onclick="openPopup('popup6')">Server implementation</button>
+    
+</div>
 
-  <section class="technical reusable" id="skills">
+<!-- Popup remains the same -->
+
+<div id="popup1" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('popup1')">&times;</span>
+    <div class="popup-details">
+      <div class="popup-image">
+        <img src="images/packet1.png" alt="linux specialization">
+      </div>
+      <div class="popup-info">
+        <h2>Routing & Switching</h2>
+        <p>I Know concepts Deeply in Routing & switching. some of those are  Inter Vlan Configurartion,Ether channel,STP,Static routing,HSRP,DHCP,MPLS,NAT,PAT,NTP,GRETunnel</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="popup2" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('popup2')">&times;</span>
+    <div class="popup-details">
+      <div class="popup-image">
+        <img src="images/packet2.png" alt="linux specialization">
+      </div>
+      <div class="popup-info">
+        <h2>Routing Protocols</h2>
+        <p>I Know concepts Deeply in Routing Protocols. some of those are OSPF,BGP,RIP,EIGRP,Redistribution,</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup3" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('popup3')">&times;</span>
+    <div class="popup-details">
+      <div class="popup-image">
+        <img src="images/packet3.png" alt="linux specialization">
+      </div>
+      <div class="popup-info">
+        <h2>Security Protocols</h2>
+        <p>I Know concepts Deeply in Routing Protocols. some of those are IPSEC,Syslog,AAA,Access control list,VPN </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup4" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('popup4')">&times;</span>
+    <div class="popup-details">
+      <div class="popup-image">
+        <img src="projects/Drawing2_page-0001.jpg" alt="VPN">
+      </div>
+      <div class="popup-info">
+        <h2>VPN</h2>
+        <p> i have deep knowledge about VPN and implement that.
+          <br><br>more details about vpn.
+          <br>go project section. </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup5" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('popup5')">&times;</span>
+    <div class="popup-details">
+      <div class="popup-image">
+        <img src="projects/Drawing3_page-0001.jpg" alt="3CX">
+      </div>
+      <div class="popup-info">
+        <h2>3CX</h2>
+        <p>i know to implement 3cx to communicate all ip phone,mobile users communicate via 3CX
+          <br><br> more details about 3cx go to projects section </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup6" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('popup6')">&times;</span>
+    <div class="popup-details">
+      <div class="popup-image">
+        <img src="projects/Drawing1_page-0001.jpg" alt="Servers">
+      </div>
+      <div class="popup-info">
+        <h2>Server implementation</h2>
+        <p>i know windows server os and implement main server,child server,proxy server,backup server and manage all servers.
+        i can implement all services in servers.
+          mail service,ftp service,web sevice,port forwarding etc.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+ </section>
+
+  <!-- Technical skills section end --> 
+
+<!-- Technologies section starts  -->
+
+  <section class="technical reusable" id="technologies">
 	<div class="heading">
-        <h2>Technical <span style="color: crimson;">Skills</span></h2>
+        <h2>Technologies</h2>
 
 	<!--   === Owl Carousel Slider Container Starts ===   -->
 	<div class="owl-carousel owl-theme technical-container">
 
-		<!--   === Card1 Starts ===   -->
+		
     	<div class="item technical-skils">
     		<main class="skill-body">
                 <div class="box">
@@ -267,10 +355,22 @@
     		<main class="skill-body">
                 <div class="box">
                     <div class="image">
-                      <img src="images/docker.jpeg" alt="" />
+                      <img src="images/windowsserver.png" alt="" />
                     </div>
                     <div class="content">
-                      <h3>Docker</h3>
+                      <h3>Windows Server</h3>
+                    </div>
+                </div>    		
+            </main>
+    	</div>
+      <div class="item technical-skils">
+    		<main class="skill-body">
+                <div class="box">
+                    <div class="image">
+                      <img src="images/3cx.jpg" alt="" />
+                    </div>
+                    <div class="content">
+                      <h3>3CX</h3>
                     </div>
                 </div>    		
             </main>
@@ -331,11 +431,38 @@
                
 
 	</div>
-	<!--   === Owl Carousel Slider Container Ends ===   -->
+	
 </div>
 </section>
-  <!-- skills section ends -->
+  <!-- Technologies section ends -->
+<!-- projects section Start --> 
+<section class="resume reusable" id="projects">
+  <div class="heading">
+    <h2>Projects </h2>
+    <main class="resume-contents">
 
+      <div class="logos" onclick="openCertificates('sk')">
+        <img src="images\sk.jpg" alt="SK">
+      </div>
+    </main>
+  </div> 
+
+      
+</section>
+      
+
+<!--<section class="resume reusable" id="Certification">
+  <div class="heading">
+    <h2>Projects  <span style="color: crimson;"></span></h2>
+  </div>
+  <main class="resume-contents">
+    
+    <div class="box" onclick="openCertificates('sk')">
+      <h4>SK holding international </h4>
+    </div>
+  </main>
+</section>-->
+<!-- projects section ends --> 
 
 
     <!-- Certification section Start --> 

@@ -175,20 +175,19 @@ function closePopup(popupId) {
 // Function to open certificates page based on the selected category
 function openCertificates(category) {
   if (category === 'cisco') {
-      window.location.href = '\portfolio\cisco_certificates.html'; // Navigate to the Cisco certificates page
+      window.location.href = '\webpages\cisco_certificates.html'; // Navigate to the Cisco certificates page
   } else if (category === 'Azure') {
-      window.location.href ='\portfolio\azure.html'; // Navigate to the Linux certificates page
+      window.location.href ='\webpages\azure.html'; // Navigate to the Linux certificates page
   } else if (category === 'Other') {
-      window.location.href = '\portfolio\Other_certificates.html'; // Navigate to the Network certificates page
+      window.location.href = '\webpages\Other_certificates.html'; // Navigate to the Network certificates page
   } else if (category === 'sk') {
-    window.location.href = '\portfolio\skholding.html'; // Navigate to the sk projects page
+    window.location.href = '\webpages\skholding.html'; // Navigate to the sk projects page
   } else if (category === 'led') {
     window.location.href = '\portfolio\led.html'; // Navigate to the sk projects page
   } else if (category === 'Rotoract') {
-    window.location.href = '\portfolio\Rotoract.html'; // Navigate to the sk projects page
+    window.location.href = '\webpages\Rotoract.html'; // Navigate to the sk projects page
   }
 }
-
 document.addEventListener('DOMContentLoaded', function() {
   // Toggle the display of the Networking button list
   document.getElementById('mainButton1').addEventListener('click', function() {
